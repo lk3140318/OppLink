@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --light-text: #6c757d;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --border-color: #dee2e6;
+    --input-bg: #fff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto; /* Added top margin */
+}
+
+h1 {
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+#bypassForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#paheLinkInput {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    transition: border-color 0.2s ease;
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#paheLinkInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+#bypassButton {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#bypassButton:hover {
+    background-color: var(--primary-hover);
+}
+
+#bypassButton:active {
+    transform: scale(0.98);
+}
+
+#bypassButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+#resultArea {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    word-wrap: break-word; /* Wrap long links */
+    text-align: left;
+    background-color: #e9ecef; /* Light background for result */
+    border: 1px solid var(--border-color);
+    display: none; /* Hidden initially */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+#resultArea.success {
+    border-left: 5px solid var(--success-color);
+    background-color: #e4f8e9; /* Lighter green */
+    display: block;
+}
+
+#resultArea.error {
+    border-left: 5px solid var(--error-color);
+    background-color: #f8d7da; /* Lighter red */
+    color: #721c24; /* Darker red text */
+    display: block;
+}
+
+#resultArea a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#resultArea a:hover {
+    text-decoration: underline;
+}
+
+#loadingIndicator {
+    margin-top: 20px;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding-top: 20px;
+    color: var(--light-text);
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+     #bypassForm {
+        flex-direction: column; /* Keep column layout */
+    }
+
+    #paheLinkInput, #bypassButton {
+        width: 100%; /* Ensure full width on smaller screens */
+        box-sizing: border-box; /* Include padding in width */
+    }
+}
