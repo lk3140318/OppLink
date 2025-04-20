@@ -1,0 +1,9 @@
+pahebypass/
+├── main.py             # FastAPI backend logic
+├── static/
+│   ├── style.css       # CSS styles
+│   └── script.js       # Frontend JavaScript
+├── templates/
+│   └── index.html      # Main HTML page
+├── requirements.txt    # Python dependencies
+└── Procfile            # For deployment (e.g., Koyeb)
