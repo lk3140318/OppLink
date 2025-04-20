@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaheBypass - Get Direct Links Instantly</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>PaheBypass</h1>
+        <p class="subtitle">Get Direct Links Instantly</p>
+
+        <form id="bypassForm">
+            <input type="url" id="paheLinkInput" placeholder="Paste Pahe.ink / Pahe.li link here..." required>
+            <button type="submit" id="bypassButton">Bypass</button>
+        </form>
+
+        <div id="resultArea">
+            <!-- Results or errors will be displayed here -->
+        </div>
+         <div id="loadingIndicator" style="display: none;">
+            Processing... please wait.
+        </div>
+    </div>
+
+    <footer>
+        <p>Disclaimer: This tool is for educational purposes only. Use responsibly.</p>
+        <p><a href="https://github.com/yourusername/pahebypass" target="_blank" rel="noopener noreferrer">View on GitHub</a></p> <!-- Add your repo link -->
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
